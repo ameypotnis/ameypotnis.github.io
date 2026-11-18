@@ -1,22 +1,526 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Amey Potnis | Senior Java Architect & FreelanceLLM Integration Specialist</title>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+    <meta name="description"
+          content="Amey Potnis - Senior Java Architect with 20+ years of experience in enterprise software engineering, LLM integration, Spring AI, Embabel AI, RAG and AI Agent architecture.">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
+    <meta name="keywords"
+          content="Amey Potnis, Java Architect, Spring AI, Embabel AI, LLM Integration, AI Agents, RAG, MCP, Java Workshop">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #0f172a;
+            --secondary: #475569;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Inter, Arial, sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            background: white;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 24px;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 90px 0;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        header h2 {
+            font-size: 23px;
+            color: #93c5fd;
+            font-weight: 500;
+        }
+
+        header p {
+            max-width: 760px;
+            margin-top: 24px;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #1e293b;
+            color: #bfdbfe;
+            padding: 7px 14px;
+            margin: 20px 5px 0 0;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        section {
+            padding: 65px 0;
+        }
+
+        section:nth-child(even) {
+            background: var(--light);
+        }
+
+        h2.section-title {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            margin-bottom: 12px;
+        }
+
+        .intro {
+            font-size: 17px;
+            color: var(--secondary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .card p {
+            color: var(--secondary);
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin-top: 12px;
+            color: var(--secondary);
+        }
+
+        .card li {
+            margin-bottom: 5px;
+        }
+
+        .highlight {
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            background: #eff6ff;
+            margin-top: 25px;
+        }
+
+        .workshop {
+            background: #0f172a;
+            color: white;
+            border-radius: 14px;
+            padding: 35px;
+        }
+
+        .workshop p {
+            color: #cbd5e1;
+        }
+
+        .workshop h3 {
+            color: #93c5fd;
+            font-weight: 500;
+        }
+
+        .workshop + .workshop {
+            margin-top: 24px;
+        }
+
+        .workshop-meta {
+            color: #94a3b8;
+            font-size: 15px;
+            margin: 14px 0 18px;
+        }
+
+        .workshop-fee {
+            color: #fbbf24;
+            font-size: 17px;
+            font-weight: 600;
+            margin: 0 0 16px;
+        }
+
+        .workshop ul {
+            padding-left: 20px;
+            margin: 12px 0;
+            color: #cbd5e1;
+        }
+
+        .workshop li {
+            margin-bottom: 6px;
+        }
+
+        .workshop-sessions {
+            margin-top: 18px;
+        }
+
+        .workshop-sessions h4 {
+            color: #e2e8f0;
+            font-size: 16px;
+            margin: 16px 0 8px;
+        }
+
+        .workshop-sessions ul {
+            margin-top: 6px;
+        }
+
+        .workshop-note {
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid #334155;
+            font-size: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 22px;
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #020617;
+            color: #cbd5e1;
+            padding: 35px 0;
+            text-align: center;
+        }
+
+        @media(max-width: 700px) {
+            header h1 {
+                font-size: 34px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 45px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>Amey Potnis</h1>
+
+        <h2>
+            Senior Java Architect |
+            Freelance LLM Integration Specialist
+        </h2>
+
+        <p>
+            Helping software engineers and technology teams
+            build intelligent, production-ready applications
+            using JS/TS, JVM languages, Spring and modern AI technologies.
+        </p>
+
+        <span class="tag">20+ Years Engineering Experience</span>
+        <span class="tag">JS/TS, JVM languages & Go</span>
+        <span class="tag">LLM & AI Agents</span>
+        <span class="tag">Enterprise Architecture</span>
+
+        <br>
+
+        <a class="button"
+           href="https://www.linkedin.com/in/amey-potnis-2a62788/">
+            Connect on LinkedIn
+        </a>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+
+        <p class="intro">
+            I am a software engineer and technology architect
+            with over 20 years of hands-on experience in
+            designing, developing and delivering enterprise
+            software applications.
+        </p>
+
+        <br>
+
+        <p>
+            My professional journey spans enterprise Java
+            development, full-stack engineering, distributed
+            systems, cloud infrastructure, DevOps and modern LLM integration engineering.
+        </p>
+
+        <p>
+            Over the last few years, I have been deeply involved
+            in integrating Large Language Models (LLMs) into
+            enterprise applications, designing and developing AI agent
+            architectures and building practical solutions
+            using the TS/Java ecosystem.
+        </p>
+
+        <div class="highlight">
+            <strong>My philosophy:</strong>
+            AI development is not just about prompting an LLM.
+            It is about engineering reliable systems around
+            LLMs using proper architecture, validation,
+            orchestration, testing and security.
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">
+            Technical Expertise
+        </h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Enterprise JVM Languages (Java, Kotlin, Scala, etc.) Development</h3>
+                <p>
+                    Extensive experience building enterprise
+                    applications and backend systems.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>LLM Integration & Generative AI</h3>
+                <p>
+                    Designing applications that use LLMs
+                    as intelligent reasoning and processing
+                    components.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Spring AI & Embabel AI</h3>
+                <p>
+                    Building AI-powered applications and
+                    agentic workflows using the Java ecosystem.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>AI Agent Architecture</h3>
+                <p>
+                    Designing workflows where AI agents
+                    can reason, make decisions and interact
+                    with external systems.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>RAG & Vector Databases</h3>
+                <p>
+                    Building knowledge-grounded applications
+                    that retrieve relevant information
+                    before generating responses.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Model Context Protocol (MCP)</h3>
+                <p>
+                    Connecting AI applications with external
+                    tools, services and enterprise systems.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>AI Testing & Evaluation</h3>
+                <p>
+                    Ensuring AI workflows are reliable,
+                    measurable and suitable for production.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Cloud, DevOps & Production Engineering</h3>
+                <p>
+                    Deploying, monitoring and maintaining
+                    enterprise-grade AWS infrastructure and applications using devops tools.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Full-Stack Engineering</h3>
+                <p>
+                    Building complete web applications
+                    and integrating intelligent backend services.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">
+            Featured Workshops
+        </h2>
+
+        <div class="workshop">
+            <h2>
+                5-Hour LLM Integration Workshop for Java Developers
+            </h2>
+
+            <h3>
+                For Senior Java Developers (5+ Years)
+            </h3>
+
+            <p class="workshop-fee">
+                Fee: ₹10,000 per seat (Offline Workshop)
+            </p>
+
+            <p>
+                Build production-ready AI applications,
+                intelligent bots and agentic workflows
+                using Java and Spring.
+            </p>
+
+            <br>
+
+            <p><strong>Topics covered:</strong></p>
+
+            <ul>
+                <li>LLM fundamentals and integration</li>
+                <li>Tool calling and function execution</li>
+                <li>Structured output and validation</li>
+                <li>Agent actions, workflows and orchestration</li>
+                <li>Classic RAG concepts and Agentic RAG coding</li>
+                <li>Unit testing and agent evaluations</li>
+                <li>Model Context Protocol (MCP)</li>
+                <li>Production architecture and best practices</li>
+            </ul>
+
+            <a class="button"
+               href="https://www.linkedin.com/in/amey-potnis-2a62788/">
+                DM me on LinkedIn to enquire about the Workshop
+            </a>
+        </div>
+
+        <div class="workshop">
+            <h2>
+                Software Engineering Essentials for Engineering &amp; MCA Students
+            </h2>
+
+            <h3>
+                A 4-Session Sunday Series for Engineering &amp; MCA Students
+            </h3>
+
+            <p class="workshop-meta">
+                On demand Sundays · 9:00 AM – 11:30 AM (2.5 hours)
+            </p>
+
+            <p class="workshop-fee">
+                Fee: ₹1,000 per seat per session (Offline Workshop)
+            </p>
+
+            <p>
+                Most students grind leetcode or stitch together AI demos without
+                learning how software is actually engineered—neither path reliably
+                leads to a strong career. Each session stands alone; attend what
+                fits your goals. By the end of the series you will see what
+                professional engineering looks like and which skills matter in an
+                AI-driven industry.
+            </p>
+
+            <div class="workshop-sessions">
+                <h4>Session 1 — DevOps Essentials</h4>
+                <ul>
+                    <li>Deployment pipelines, Docker, CI/CD</li>
+                    <li>Running and operating apps in production</li>
+                </ul>
+
+                <h4>Session 2 — Architecture Essentials</h4>
+                <ul>
+                    <li>Scalable design, APIs, databases, caching</li>
+                    <li>System thinking and common patterns</li>
+                </ul>
+
+                <h4>Session 3 — LLM Integration Essentials</h4>
+                <ul>
+                    <li>Practical AI in applications</li>
+                    <li>Prompting, structured output, tool calling, reliability</li>
+                </ul>
+
+                <h4>Session 4 — Database Essentials</h4>
+                <ul>
+                    <li>Database types and when to use them</li>
+                    <li>Business usage, scaling, and trade-offs</li>
+                </ul>
+            </div>
+
+            <a class="button"
+               href="https://www.linkedin.com/in/amey-potnis-2a62788/">
+                DM me on LinkedIn to enquire about the series
+            </a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">
+            Connect & Collaborate
+        </h2>
+
+        <p class="intro">
+            Interested in AI integration, Java architecture,
+            corporate workshops or technical mentoring?
+            Let's connect.
+        </p>
+
+        <a class="button"
+           href="https://www.linkedin.com/in/amey-potnis-2a62788/">
+            LinkedIn Profile
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>
+            © 2026 Amey Potnis.
+            Java Engineering | AI Integration | Agent Architecture
+        </p>
+    </div>
+</footer>
+
+</body>
 </html>
